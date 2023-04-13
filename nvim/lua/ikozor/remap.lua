@@ -18,3 +18,5 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 vim.keymap.set({"n", "v"}, "<C-y>", [["+y]])
 vim.keymap.set("n", "<C-Y>", [["+Y]])
 
+-- git push
+vim.keymap.set("n", "<leader>gp", ":Git push<CR>")
