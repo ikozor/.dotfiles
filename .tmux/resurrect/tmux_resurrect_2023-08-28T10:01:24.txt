@@ -1,0 +1,15 @@
+pane	0	1	:fish	1	:*	0	:/sys/devices/pci0000:00/0000:00:14.3/PNP0C09:00/VPC2004:00	1	fish	:
+pane	algo	1	:nvim	0	:-	0	:/home/ikozor/Documents/Programming/algo/kata-machine	1	nvim	:nvim .
+pane	algo	2	:fish	1	:*	0	:/home/ikozor/Documents/Programming/algo/kata-machine	1	nvim	:nvim .
+pane	flower	1	:make	1	:*	0	:/home/ikozor/Documents/Programming/flowers_n_design/gobank	1	nvim	:nvim .
+pane	flower	2	:fish	0	:-	0	:/home/ikozor/.config/nvim	1	fish	:
+pane	interpreter	1	:book	0	:-	0	:/home/ikozor/Documents/Programming/Books/interpreter_go/code/01/src/monkey	1	nvim	:nvim lexer/
+pane	interpreter	2	:mine	1	:*	0	:/home/ikozor/Documents/Programming/Books/interpreter_go/my-code/src/monkey	1	fish	:
+window	0	1	1	:*	afbe,173x50,0,0,1
+window	algo	1	0	:-	afbf,173x50,0,0,2
+window	algo	2	1	:*	afc0,173x50,0,0,3
+window	flower	1	1	:*	afc1,173x50,0,0,4
+window	flower	2	0	:-	afc6,173x50,0,0,9
+window	interpreter	1	0	:-	afc2,173x50,0,0,5
+window	interpreter	2	1	:*	afc3,173x50,0,0,6
+state	flower	interpreter

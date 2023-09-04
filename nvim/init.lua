@@ -119,22 +119,13 @@ require('lazy').setup({
   },
 
   {
-    'morhetz/gruvbox',
-    config = function()
-      vim.g.gruvbox_transparent_bg = 1
-    	vim.cmd("autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE")
-    	vim.cmd.colorscheme 'gruvbox'
-    end,
-  },
-
-  {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
     -- See `:help lualine.txt`
     opts = {
       options = {
         icons_enabled = true,
-        theme = 'gruvbox',
+        theme = 'tokyonight',
         component_separators = '|',
         section_separators = '',
       },
@@ -157,6 +148,15 @@ require('lazy').setup({
 
   -- Fuzzy Finder (files, lsp, etc)
   { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
+
+  {
+    'folke/tokyonight.nvim',
+    config = function()
+     --  vim.g.gruvbox_transparent_bg = 1
+    	-- vim.cmd("autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE")
+    	vim.cmd.colorscheme 'tokyonight-night'
+    end,
+  },
 
   {
     -- Highlight, edit, and navigate code
@@ -189,7 +189,8 @@ require('lazy').setup({
 
   'jose-elias-alvarez/null-ls.nvim',
   'MunifTanjim/prettier.nvim',
-  'joshzcold/cmp-jenkinsfile',
+  {'ckipp01/nvim-jenkinsfile-linter', dependencies = { 'nvim-lua/plenary.nvim' }},
+
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
@@ -276,6 +277,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
+
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
 require('telescope').setup {
@@ -311,11 +313,20 @@ vim.keymap.set('n', '<leader>ss', function()
 	require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ") })
 end)
 
+require('tokyonight').setup({
+  transparent = true
+})
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
   ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'vimdoc', 'vim' },
+
+  sync_install = true,
+
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
   auto_install = true,
@@ -367,6 +378,8 @@ require('nvim-treesitter.configs').setup {
     },
   },
 }
+
+vim.cmd('source /home/ikozor/.config/nvim/detectGoHtml.vim')
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
@@ -482,6 +495,7 @@ local servers = {
   },
 }
 
+require'lspconfig'.tailwindcss.setup{}
 -- Setup neovim lua configuration
 require('neodev').setup()
 
@@ -610,6 +624,6 @@ prettier.setup({
     "yaml",
   },
 })
-
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+

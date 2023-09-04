@@ -1,0 +1,11 @@
+pane	algo	1	:nvim	0	:-	0	:/home/ikozor/Documents/Programming/algo/kata-machine	1	nvim	:nvim .
+pane	algo	2	:fish	1	:*	0	:/home/ikozor/Documents/Programming/algo/kata-machine	1	nvim	:nvim .
+pane	flower	1	:nvim	1	:*	0	:/home/ikozor/Documents/Programming/flowers_n_design/backend	1	nvim	:nvim storage.go
+pane	interpreter	1	:book	0	:-	0	:/home/ikozor/Documents/Programming/Books/interpreter_go/code/01/src/monkey	1	nvim	:nvim lexer/
+pane	interpreter	2	:mine	1	:*	0	:/home/ikozor/Documents/Programming/Books/interpreter_go/my-code/src/monkey	1	fish	:
+window	algo	1	0	:-	afbe,173x50,0,0,1
+window	algo	2	1	:*	afbf,173x50,0,0,2
+window	flower	1	1	:*	afbd,173x50,0,0,0
+window	interpreter	1	0	:-	afc1,173x50,0,0,4
+window	interpreter	2	1	:*	afc2,173x50,0,0,5
+state	flower	
