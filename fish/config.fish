@@ -77,8 +77,10 @@ set -gx EDITOR nvim
 ### SASHIMI PROMPT END ###
 
 alias vim="nvim"
-alias doc="cd ~/Documents/"
-alias dow="cd ~/Downloads/"
-alias lenovo="cd /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/"
 
 starship init fish | source
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+set --export TURSO_API_TOKEN "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDQ0MDgzMDEsImlhdCI6MTcwMzgwMzUwMSwiaWQiOjU2NjN9.N-Jok5B7ylqc_kDR3fq0rzW6KEee6RMqgImBI0kL0IY"
