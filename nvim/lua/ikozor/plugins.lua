@@ -22,7 +22,12 @@ require('lazy').setup({
     {
         'luisiacc/gruvbox-baby', branch = 'main'
     },
+    {
+        "scottmckendry/cyberdream.nvim",
+        lazy = false,
+        priority = 1000,
 
+    },
     {
         "folke/trouble.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -73,4 +78,5 @@ require('lazy').setup({
 
     "akinsho/toggleterm.nvim",
     "joerdav/templ.vim",
+    "windwp/nvim-ts-autotag",
 })
