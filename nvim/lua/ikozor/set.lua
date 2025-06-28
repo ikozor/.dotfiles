@@ -1,32 +1,36 @@
-vim.wo.number = true
-vim.opt.relativenumber = true
+vim.o.number = true
+vim.o.relativenumber = true
 
+vim.o.ts = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
 
-vim.opt.smartindent = true
+vim.o.mouse = "a"
 
-vim.opt.wrap = false
+vim.o.showmode = false
 
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-vim.opt.undofile = true
+vim.o.breakindent = true
+vim.o.wrap = false
 
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
-
-vim.opt.termguicolors = true
-
-vim.opt.scrolloff = 8
-vim.opt.isfname:append("@-@")
-
-vim.opt.updatetime = 50
+vim.o.undofile = true
 
 vim.o.hlsearch = false
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
-vim.opt.ts = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+vim.o.signcolumn = "yes"
 
+vim.o.updatetime = 250
+vim.o.timeoutlen = 300
+
+vim.o.splitright = true
+vim.o.splitbelow = true
+
+vim.o.list = true
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+
+vim.o.inccommand = "split"
+vim.o.scrolloff = 10
+
+vim.o.termguicolors = true

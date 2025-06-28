@@ -1,2 +1,1 @@
-require('ikozor')
-
+require("ikozor")
